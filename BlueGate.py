@@ -69,7 +69,6 @@ class Connection:
 
     def broken_connection(self, signum, frame):
         log_success("Connection not responding")
-        print(signum, frame)
 
         try:
             self.close()
