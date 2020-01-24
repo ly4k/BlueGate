@@ -1,7 +1,7 @@
 
 #  BlueGate
 
-Proof of Concept (Denial of Service) for CVE-2020-0609 and CVE-2020-0610.
+Proof of Concept (Denial of Service + scanner) for CVE-2020-0609 and CVE-2020-0610.
 
   
 
