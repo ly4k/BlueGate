@@ -105,7 +105,6 @@ class Connection:
         ready = select.select([self.socket], [], [], TIMEOUT)
         if ready[0]:
             buf = self.read(16)
-            signal.alarm(0)
             return not (0x8000ffff == struct.unpack('<L', buf[-4:])[0])
         
         return True
@@ -117,7 +116,7 @@ class Connection:
         self.connection.send(buffer)
         
     def read(self, size):
-        return self.connection.recv(1024)
+        return self.connection.recv(size)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
